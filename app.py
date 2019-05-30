@@ -70,7 +70,7 @@ class Vote(db.Model):
         return F"Vote({self.vote_type}, {self.reason})"
 
 
-def fuckyou():
+def add_swifty():
     swifty = User(username='Swifty', email='iamus@live.com',rank=0)
     db.create_all()
     db.session.add(swifty)
@@ -146,5 +146,5 @@ def list_topic():
     return render_template('core.html', body=gewd, the_list=Topic.query.all())
 
 if __name__ == '__main__':
-    #fuckyou()
+    #add_swifty()
     app.run()
